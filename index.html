@@ -53,26 +53,31 @@
         evt.stopPropagation();
         evt.preventDefault();
       }
-      var dropZone = document.getElementById('INPUT');
-      dropZone.addEventListener('dragover', handleDragOver, false);
-      dropZone.addEventListener('drop', handleFileSelect, false);
 
       // Carga fichero
       window.addEventListener('load', inicio, false);
 
       function inicio() {
-        document.getElementById('archivo').addEventListener('change', leer, false);        
+        document.getElementById('archivo').addEventListener('change', cargar, false);        
       }
+
+      function cargar(ev) {
+        var arch=new FileReader();
+        arch.addEventListener('load',leer,false);
+        arch.readAsText(ev.target.files[0]);
+      }
+
       function leer(ev) {
         document.getElementById('INPUT').value=ev.target.result;
       }
 
-      // Cargar ejemplos
-      
+      var dropZone = document.getElementById('INPUT');
+      dropZone.addEventListener('dragover', handleDragOver, false);
+      dropZone.addEventListener('drop', handleFileSelect, false);
     </script>
   <input id="PARSE" value=parse type=button class="mylink">
+  <input type="file" id="archivo" class="mylink">
   <pre id=OUTPUT></pre>
-  <input type="file" id="archivo">
-  <button onclick="inicio();"></button>
+  <br>
 </body>
 </html>
