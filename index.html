@@ -29,14 +29,6 @@
              };
   </textarea>
   <br>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-    <script type="text/html" id='usageList'>
-      <% _.each(files, function(f) { %>
-        <textarea>
-          <%document.getElementById("INPUT").write(f);%>
-        </textarea>
-      <% }); %>
-    </script>
   </head>
   <body>
 
@@ -47,8 +39,14 @@
       function handleFileSelect(evt) {
         evt.stopPropagation();
         evt.preventDefault();
-        var files = evt.dataTransfer.files; // FileList object.
-        // files is a FileList of File objects. List some properties.
+        var files = evt.dataTransfer.files;
+        // FileReader
+        var reader = new FileReader();
+        reader.onload = function(event) {
+          document.getElementById('INPUT').value = event.target.result;
+        }
+        reader.readAsText(files[0], "UTF-8");
+
         var template = _.template(usageList.innerHTML);
         document.getElementById('list').innerHTML = template({ files : files});
         evt.target.style.background = "black";
