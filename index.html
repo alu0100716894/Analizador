@@ -30,12 +30,11 @@
   <br>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
     <script type="text/html" id='usageList'>
-      <ul>
-        <% _.each(files, function(f) { %>
-          <textarea>
-          </textarea>
-          <% }); %>
-      </ul>
+      <% _.each(files, function(f) { %>
+        <textarea>
+          <%document.getElementById("INPUT").write(f);%>
+        </textarea>
+      <% }); %>
     </script>
   </head>
   <body>
