@@ -58,5 +58,13 @@ nav li {
   padding: 5px;
 }
 
+#drop_zone{
+  width:50%;
+  background-color: black;
+  color: white;
+  padding: 3% 10%;
+  text-align: center;
+}
+
 /* Supress borders after the button is pressed */
 #PARSE:focus {outline:0; }
