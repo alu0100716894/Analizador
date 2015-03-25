@@ -68,6 +68,7 @@ nav li {
 
 #letras {font-size: 160%; color:#A05B81;}
 #letrasMenores {color:#FFFFFF;}
+h1  { text-align: center; font-size: 300%; color:#FFFFFF}
 
 /* Supress borders after the button is pressed */
 #PARSE:focus {outline:0; }
