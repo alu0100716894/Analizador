@@ -6,21 +6,21 @@ html *
         padding-right: 10px; vertical-align: top;}
     table {width: 90%; border: 0px; cellpadding: 0px;}
 }
-#INPUT 
+#INPUT
 {
-    border: none; 
+    border: none;
     color: black;
     font-family: monospace;
     height: 1in;
     overflow: auto;
     /* padding: 0.5em; */
     width: 80%;
-    background-color: #66FFCC; 
+    background-color: #66FFCC;
 }
-body { background-color: #99FFFF; }
-#OUTPUT 
+body { background:url("./img/fondo.jpeg"); }
+#OUTPUT
 {
-    background-color: #66FFCC; 
+    background-color: #66FFCC;
     width: 80%;
 }
 
@@ -32,8 +32,8 @@ a {
 
 a:link { color:#00FFFF; }
 a:visited { color:black; }
-a:hover{ 
-  background-color:black; 
+a:hover{
+  background-color:black;
   color: #FFF;
 }
 a:active {color:#0000FF;}  /* selected link */
@@ -65,6 +65,9 @@ nav li {
   padding: 3% 10%;
   text-align: center;
 }
+
+#letras {font-size: 160%; color:#A05B81;}
+#letrasMenores {color:#FFFFFF;}
 
 /* Supress borders after the button is pressed */
 #PARSE:focus {outline:0; }
