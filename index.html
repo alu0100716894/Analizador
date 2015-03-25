@@ -21,6 +21,7 @@
   <p>
     <font id=letrasMenores>Fill the input box with javascript code:</font>
   </p>
+  <div id="drop_zone">Drop files here</div>
   <textarea id="INPUT">
      var a = "hello"; // initialize a
      var b = function(x) {
@@ -31,10 +32,6 @@
   <br>
   </head>
   <body>
-
-    <div id="drop_zone">Drop files here</div>
-    <output id="list"></output>
-
     <script>
       function handleFileSelect(evt) {
         evt.stopPropagation();
@@ -46,9 +43,6 @@
           document.getElementById('INPUT').value = event.target.result;
         }
         reader.readAsText(files[0], "UTF-8");
-
-        var template = _.template(usageList.innerHTML);
-        document.getElementById('list').innerHTML = template({ files : files});
         evt.target.style.background = "black";
       }
       function handleDragOver(evt) {
