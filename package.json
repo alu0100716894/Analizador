@@ -1,0 +1,25 @@
+{
+  "name": "Analizador",
+  "version": "1.0.0",
+  "description": "Analizador de JavaScript",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alu0100716894/Analizador.git"
+  },
+  "author": "Manuel Alejandro Rordiguez Santana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alu0100716894/Analizador/issues"
+  },
+  "homepage": "https://github.com/alu0100716894/Analizador",
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "chai": "^2.1.2",
+    "karma": "^0.12.31",
+    "mocha": "^2.2.1"
+  }
+}
