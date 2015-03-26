@@ -1,28 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title><%- title %></title>
-	<link href="../global.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="../csv.js"></script>
-	  <script type="text/html" id="tableTemplate">
-	<p>
-		<table class="center" id="result">
-            <% _.each(rows, function(row) { %>
-                <tr class="<%=row.type%>">
-                    <% _.each(row.items, function(name) { %>
-                    <td><%= name %></td>
-                    <% }); %>
-                </tr>
-            <% }); %>
-		</table>
-	</p>
+   <title>Analizador JavaScript</title>
+   <link href="global.css" rel="stylesheet" type="text/css">
+   <script src="parse.js"></script>
+   <script src="tokens.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="main.js"></script>
+</head>
 
-	</script>
-  </head>
-  <body>
-    <%- body %>
-  </body>
+<body>
+  <%-body%>
+</body>
 </html>
